@@ -1,4 +1,4 @@
-package com.xwch.base;
+package com.xwch.base.service.impl;
 
 /**
  * Created by xwch on 2017/5/21.

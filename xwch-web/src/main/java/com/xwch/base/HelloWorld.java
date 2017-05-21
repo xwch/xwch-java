@@ -1,5 +1,7 @@
 package com.xwch.base;
 
+import com.xwch.base.service.impl.HelloWorldService;
+
 /**
  * Created by xwch on 2017/5/21.
  */
