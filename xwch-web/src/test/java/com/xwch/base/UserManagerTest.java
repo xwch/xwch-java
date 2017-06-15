@@ -19,10 +19,5 @@ public class UserManagerTest extends BaseTest {
 
     @Test
     public void queryTest(){
-        UserDAO userDAO = new UserDAO();
-        userDAO.setStat("USABLE");
-        userDAO.setUserName("xwch");
-        List<UserDAO> list = userManager.queryUserByUserName(userDAO);
-        System.out.println("list--->"+list.toString());
     }
 }
