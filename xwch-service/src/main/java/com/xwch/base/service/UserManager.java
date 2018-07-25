@@ -9,5 +9,7 @@ import java.util.List;
  */
 public interface UserManager {
 
+    UserDAO queryUserByUserId(String userID);
+
     List<UserDAO> queryUserByUserName(String userName);
 }

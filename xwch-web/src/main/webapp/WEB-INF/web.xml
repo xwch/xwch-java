@@ -15,12 +15,13 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
 
+  <!--配置的是/,则所有的url都被DispatcherServlet拦截，这种情况下有可能会出现html，js，css，img等静态资源无法访问-->
   <servlet-mapping>
     <servlet-name>xwch-web</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>login.html</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -12,7 +12,13 @@ import lombok.*;
 @AllArgsConstructor
 public enum UsableFlagEnums {
 
+    /**
+     * 有效
+     */
     USABLE("USABLE"),
+    /**
+     * 无效
+     */
     UN_USABLE("UN_USABLE");
 
     private String usableFlag;

@@ -2,9 +2,10 @@ package com.xwch.base.dao;
 
 import com.xwch.base.bean.UserDAO;
 import com.xwch.base.bean.UserDAOExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface UserDAOMapper {
@@ -95,4 +96,7 @@ public interface UserDAOMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(UserDAO record);
+
+
+    List<UserDAO> getList(String userName);
 }

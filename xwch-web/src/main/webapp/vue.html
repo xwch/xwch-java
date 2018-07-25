@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:v-bind="http://java.sun.com/jsf/composite">
+<head>
+    <meta charset="UTF-8">
+    <title>VueTest</title>
+    <!--Vue引入-->
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">
+        {{message}}
+    </div>
+
+    <div id="app-2">
+  <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </span>
+    </div>
+    <script>
+    var app2 = new Vue({
+    el: '#app-2',
+    data: {
+    message: '页面加载于 ' + new Date()
+    }
+    })
+    </script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',/*div的id*/
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+    </script>
+</body>
+</html>

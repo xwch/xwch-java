@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
-
 /**
  * Created by xwch on 2017/6/15.
  */
@@ -21,13 +19,13 @@ public class UserController {
     @Autowired
     UserManager userManager;
 
-    @RequestMapping("/{userName}")
+    @RequestMapping("/{userId}")
     @ResponseBody
-    public List<UserDAO> getUserInfoByName(@PathVariable("userName") String userName){
-        List<UserDAO> userDAOList;
+    public UserDAO getUserInfoByName(@PathVariable("userId") String userId){
+        UserDAO userDAO;
         try {
-            userDAOList = userManager.queryUserByUserName(userName);
-            return userDAOList;
+            userDAO = userManager.queryUserByUserId(userId);
+            return userDAO;
         } catch (Exception e){
             log.error("查询系统异常",e);
             return null;
